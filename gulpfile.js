@@ -12,7 +12,7 @@ var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 
 var pkg = require('./package.json');
-var dirs = pkg['h5bp-configs'].directories;
+var dirs = pkg['configs'].directories;
 
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
