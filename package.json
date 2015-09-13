@@ -29,16 +29,16 @@
       "test": "test"
     }
   },
-  "homepage": "https://html5boilerplate.com/",
+  "homepage": "https://conmancode.com/",
   "license": {
     "type": "MIT",
-    "url": "https://github.com/h5bp/html5-boilerplate/blob/master/LICENSE.txt"
+    "url": "https://github.com/econne01/agentmatcher/blob/master/LICENSE.txt"
   },
-  "name": "html5-boilerplate",
+  "name": "agentmatcher",
   "private": true,
   "scripts": {
     "build": "gulp build",
     "test": "gulp archive && mocha --reporter spec --timeout 5000"
   },
-  "version": "5.2.0"
+  "version": "0.1.0"
 }
