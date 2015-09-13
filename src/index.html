@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Agent Matcher</title>
+        <meta name="description" content="Matching engine for customer to service industry professionals">
+        <meta name="keywords" content="find agent real estate match personality">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -13,6 +14,11 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="../bower_components/paper-header-panel/paper-header-panel.html">
+        <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+        <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -20,6 +26,14 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <paper-header-panel>
+            <paper-toolbar>
+                <paper-tabs id="tabs" selected="home" self-end>
+                    <paper-tab name="home">Home</paper-tab>
+                    <paper-tab name="about">About</paper-tab>
+                </paper-tabs>
+            </paper-toolbar>
+        </paper-header-panel>
         <p>Hello world! This is HTML5 Boilerplate.</p>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
