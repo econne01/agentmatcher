@@ -2,6 +2,7 @@ var fs = require('fs');
 var path = require('path');
 
 var gulp = require('gulp');
+var symlink = require('gulp-symlink');
 
 // Load all gulp plugins automatically
 // and attach them to the `plugins` object
@@ -65,6 +66,7 @@ gulp.task('clean', function (done) {
 });
 
 gulp.task('copy', [
+    'build:linkbower',
     'copy:.htaccess',
     'copy:index.html',
     'copy:jquery',
@@ -73,6 +75,11 @@ gulp.task('copy', [
     'copy:misc',
     'copy:normalize'
 ]);
+
+gulp.task('build:linkbower', function () {
+    return gulp.src('bower_components')
+               .pipe(symlink('dist/bower_components', {force: true}));
+});
 
 gulp.task('copy:.htaccess', function () {
     return gulp.src('node_modules/apache-server-configs/dist/.htaccess')
