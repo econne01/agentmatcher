@@ -87,9 +87,20 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html {
+    background: url(../img/home_for_sale.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
-
-
+#question_card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 
