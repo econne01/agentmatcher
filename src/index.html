@@ -41,17 +41,17 @@
             </paper-toolbar>
         </paper-header-panel>
 
-        <paper-card id="question_card" heading="I am a home ...">
+        <paper-card id="question_1" class="active" heading="I am a home ...">
             <div class="card-actions">
-                <paper-button>Buyer</paper-button>
-                <paper-button>Seller</paper-button>
+                <paper-button onClick="askNextQuestion()">Buyer</paper-button>
+                <paper-button onClick="askNextQuestion()">Seller</paper-button>
             </div>
         </paper-card>
 
         <paper-card id="question_2" heading="My home is in this city:">
-            <paper-input label="City">
+            <paper-input id="cityInput" label="City">
                 <iron-icon prefix icon="search"></iron-icon>
-                <paper-icon-button suffix icon="clear"></paper-icon-button>
+                <paper-icon-button suffix icon="clear" onClick="clearInput('cityInput')"></paper-icon-button>
             </paper-input>
         </paper-card>
 

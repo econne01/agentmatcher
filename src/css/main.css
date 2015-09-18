@@ -100,10 +100,11 @@ paper-card {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
 }
 
-#question_card {
-  display: none;
+paper-card.active {
+  display: inline-block;
 }
 
 
