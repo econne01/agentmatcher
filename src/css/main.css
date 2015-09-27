@@ -88,7 +88,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 html {
-    background: url(../img/home_for_sale.jpg) no-repeat center center fixed;
+    background: url(../img/home_1.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -101,6 +101,10 @@ paper-card {
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
+}
+
+paper-card#about_card {
+  padding: 10px;
 }
 
 paper-card.active {

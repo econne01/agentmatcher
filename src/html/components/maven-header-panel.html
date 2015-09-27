@@ -5,12 +5,24 @@
 
 <dom-module id="maven-header-panel">
     <template>
-        <style></style>
+        <style>
+            paper-tab {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            paper-tab a {
+                color: white;
+            }
+        </style>
         <paper-header-panel>
             <paper-toolbar>
                 <paper-tabs id="tabs" selected="home" self-end>
-                    <paper-tab name="home">Home</paper-tab>
-                    <paper-tab name="about">About</paper-tab>
+                    <paper-tab name="home" noBar="true" noink="true" link>
+                        <a href="/" class="horizontal center-center layout">Home</a>
+                    </paper-tab>
+                    <paper-tab name="about" noBar="true" noink="true" link>
+                        <a href="/html/views/about.html" class="horizontal center-center layout">About</a>
+                    </paper-tab>
                 </paper-tabs>
             </paper-toolbar>
         </paper-header-panel>
