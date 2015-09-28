@@ -23,6 +23,7 @@
         <link rel="import" href="./bower_components/paper-input/paper-input.html">
         <link rel="import" href="./bower_components/paper-icon-button/paper-icon-button.html">
         <link rel="import" href="../../html/components/maven-header-panel.html">
+        <link rel="import" href="../../html/components/recommended-agent-card.html">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -32,19 +33,37 @@
         <!-- Add your site or application content here -->
         <maven-header-panel></maven-header-panel>
 
-        <paper-card id="question_1" class="active" heading="I am a home ...">
+        <paper-card id="question_1" class="active question page-center" heading="I am a home ...">
             <div class="card-actions">
-                <paper-button onClick="askNextQuestion()">Buyer</paper-button>
-                <paper-button onClick="askNextQuestion()">Seller</paper-button>
+                <paper-button onClick="showRecommendedAgents()">Buyer</paper-button>
+                <paper-button onClick="showRecommendedAgents()">Seller</paper-button>
             </div>
         </paper-card>
 
-        <paper-card id="question_2" heading="My home is in this city:">
+        <paper-card id="question_2" class="question page-center" heading="My home is in this city:">
             <paper-input id="cityInput" label="City">
                 <iron-icon prefix icon="search"></iron-icon>
                 <paper-icon-button suffix icon="clear" onClick="clearInput('cityInput')"></paper-icon-button>
             </paper-input>
         </paper-card>
+
+        <div id="recommendedAgentList" class="layout wrap inline center-center hidden">
+            <recommended-agent-card
+                name="Linda Dale"
+                img-src="/img/agents/linda_dale1.jpg"
+                experience="20",
+                volume-bracket="10",
+                frequent-txn-type="Single Family">
+            </recommended-agent-card>
+
+            <recommended-agent-card
+                name="Tim Connelly"
+                img-src="/img/agents/tim_connelly.jpg"
+                experience="8",
+                volume-bracket="20",
+                frequent-txn-type="Single Family">
+            </recommended-agent-card>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>

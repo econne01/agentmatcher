@@ -1,9 +1,14 @@
 var activeQuestionId = 0;
-var askNextQuestion = function () {
+
+var hideQuestion = function () {
     var activeQuestion = document.getElementById('question_' + activeQuestionId);
     if (activeQuestion) {
         activeQuestion.classList.remove('active');
     }
+}
+
+var askNextQuestion = function () {
+    hideQuestion();
 
     // increment the active question
     activeQuestionId += 1;
@@ -12,6 +17,13 @@ var askNextQuestion = function () {
     if (activeQuestion) {
         activeQuestion.classList.add('active');
     }
+}
+
+var showRecommendedAgents = function () {
+    hideQuestion();
+
+    var recommendedAgentList = document.getElementById('recommendedAgentList');
+    recommendedAgentList.classList.remove('hidden');
 }
 
 var clearInput = function (inputId) {

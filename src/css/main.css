@@ -95,11 +95,14 @@ html {
     background-size: cover;
 }
 
-paper-card {
+.page-center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+paper-card.question {
     display: none;
 }
 
@@ -111,7 +114,12 @@ paper-card.active {
   display: inline-block;
 }
 
-
+#recommendedAgentList {
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    transform: translatey(-50%);
+}
 
 
 

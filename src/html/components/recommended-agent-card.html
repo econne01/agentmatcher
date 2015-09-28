@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+
+<dom-module id="recommended-agent-card">
+    <template>
+        <style>
+            paper-card {
+                background-color: beige;
+                border-radius: 5%;
+                margin: 10px;
+                padding: 5px;
+                text-align: center;
+            }
+            img {
+                height: 200px;
+                width: 200px;
+            }
+            .title {
+                font-size: larger;
+            }
+        </style>
+        <paper-card class="active">
+            <div class="title">{{ name }}</div>
+            <img src="{{ imgSrc }}"/>
+            <div class="agent_info">
+                <div><span>Experience: </span><span>{{ experience }}</span><span> years</span></div>
+            </div>
+        </paper-card>
+    </template>
+    <script>
+        Polymer({
+            properties: {
+                name: String,
+                imgSrc: String,
+                experience: String,
+                volumeBracket: String,
+                frequentTxnType: String
+            }
+        });
+    </script>
+</dom-module>
+
