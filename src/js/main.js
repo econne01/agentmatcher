@@ -5,7 +5,14 @@ var hideQuestion = function () {
     if (activeQuestion) {
         activeQuestion.classList.remove('active');
     }
-}
+};
+
+var showRecommendedAgents = function () {
+    hideQuestion();
+
+    var recommendedAgentList = document.getElementById('recommendedAgentList');
+    recommendedAgentList.classList.remove('hidden');
+};
 
 var askNextQuestion = function () {
     hideQuestion();
@@ -13,24 +20,19 @@ var askNextQuestion = function () {
     // increment the active question
     activeQuestionId += 1;
 
-    activeQuestion = document.getElementById('question_' + activeQuestionId);
+    var activeQuestion = document.getElementById('question_' + activeQuestionId);
     if (activeQuestion) {
         activeQuestion.classList.add('active');
+    } else {
+        showRecommendedAgents();
     }
-}
+};
 
-var showRecommendedAgents = function () {
-    hideQuestion();
-
-    var recommendedAgentList = document.getElementById('recommendedAgentList');
-    recommendedAgentList.classList.remove('hidden');
-}
-
-var clearInput = function (inputId) {
-    var polymerInput = document.getElementById(inputId);
-    polymerInput.inputElement.value = '';
-}
+// var clearInput = function (inputId) {
+//     var polymerInput = document.getElementById(inputId);
+//     polymerInput.inputElement.value = '';
+// };
 
 window.onload = function () {
     askNextQuestion();
-}
+};

@@ -13,7 +13,7 @@ var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 
 var pkg = require('./package.json');
-var dirs = pkg['configs'].directories;
+var dirs = pkg.configs.directories;
 
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
@@ -78,7 +78,7 @@ gulp.task('copy', [
 
 gulp.task('build:linkbower', function () {
     return gulp.src('bower_components')
-               .pipe(symlink('dist/bower_components', {force: true}));
+               .pipe(symlink('dist/bower_components', { force: true }));
 });
 
 gulp.task('copy:.htaccess', function () {
